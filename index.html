@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Weather Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div id="weatherAnimation"></div>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h1>🌤 Weather Pro</h1>
+        <button onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Search city...">
+        <button onclick="getWeather()">Search</button>
+        <button onclick="getLocationWeather()">📍</button>
+    </div>
+
+    <div id="history"></div>
+
+    <div class="loader" id="loader"></div>
+
+    <div class="weather-card" id="weatherCard">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon">
+        <p id="temp"></p>
+        <p id="desc"></p>
+        <p id="humidity"></p>
+        <p id="wind"></p>
+    </div>
+
+    <canvas id="tempChart"></canvas>
+
+    <div class="forecast" id="forecast"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
